@@ -122,10 +122,10 @@
 <body>
 <!--头像-->
 <div class="cs">
-    <img src="/touxiang1.jpg" id="logo">
+    <img src="/DaiXianYi/touxiang1.jpg" id="logo">
 </div>
 <div class="music">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="https://music.163.com/outchain/player?type=2&id=34341360&auto=1&height=32"></iframe>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="https://music.163.com/outchain/player?type=2&id=475479888&auto=1&height=32"></iframe>
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
 <p class="text" style="color: #FFCCCC;">
@@ -136,10 +136,11 @@
     <span id="span_dt_dt"></span>
 </p>
 
+
 <script language="javascript">
     function show_date_time() {
         window.setTimeout("show_date_time()", 1000);
-        BirthDay = new Date("03/09/2022 00:00:00");
+        BirthDay = new Date("03/09/2022 06:16:00");
         today = new Date();
         timeold = (today.getTime() - BirthDay.getTime());
         sectimeold = timeold / 1000
@@ -165,11 +166,11 @@
             if (a===1) {
                 document.body.classList.add('body--ready');
                 alert("你要吃的我都做~"); 
-                S.UI.simulate("小依|遇见你|很幸运|#time");
+                S.UI.simulate("小依|遇|见|你|很|幸|运|#time");
             }else if (a===2){
                 document.body.classList.add('body--ready1');
                 alert("你想去的地方我都陪你去~");
-                S.UI.simulate("小依|我爱你|#time");
+                S.UI.simulate("小依|我|爱|你|#time");
             }else if (a===3) {
                  document.body.classList.add('body--ready2');
                  alert("你想做的事情我都陪你做~");
@@ -177,7 +178,7 @@
             }else if (a===4) {
                  document.body.classList.add('body--ready3');
                  alert("任何时候记住你都有我，我爱你，超级超级超级爱你~");
-                 S.UI.simulate("小依|以后的路|我|陪着|你|走|#countdown 3|#time");
+                 S.UI.simulate("小依|以|后|的|路|我|陪|你|走|#countdown 3|#time");
             }else{
                  document.body.classList.add('body--ready4');
                  alert("小依，我爱你哦~");
@@ -636,10 +637,6 @@
     }());
     S.init();
 </script>
-<!--音乐可改-->
-<!-- <audio autoplay="autoplay" loop="loop">
-    <source src="http://m10.music.126.net/20180509183512/5ae461e9a42675d782840bf139b05c60/ymusic/e492/ea7a/6a27/8799d19e52d9bbe3ae15febb03d7efdb.mp3" type="audio/mpeg">
-</audio> -->
 </body>
 </html>
 
