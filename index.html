@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--<meta itemprop="image" content="./images/fenxiang.png" />-->
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
     <style>
         html {
             height: 100%;
@@ -102,7 +104,7 @@
             text-align: center;
         }
         .text {
-            position: fixed;
+            position: relative;
             bottom: 80px;
             text-align: center;
             width: 100%;
@@ -114,6 +116,9 @@
             text-align: right;
             width: 100%;
             font-weight: bold;
+        }
+        .waline {
+            background: white;
         }
     </style>
 
@@ -135,6 +140,16 @@
     <br/>
     <span id="span_dt_dt"></span>
 </p>
+<<<<<<< Updated upstream
+=======
+<div class="waline" id="waline"></div>
+<script>
+    Waline.init({
+        el: '#waline',
+        serverURL: 'https://topic-from-walie.vercel.app/',
+    });
+</script>
+>>>>>>> Stashed changes
 
 <script language="javascript">
     function show_date_time() {
