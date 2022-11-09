@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--<meta itemprop="image" content="./images/fenxiang.png" />-->
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
     <style>
         html {
             height: 100%;
@@ -20,41 +22,77 @@
             color: #ebf7f4;
         }
         .body--ready {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 0%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 0%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 0%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 0%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 0%);
+            background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+            background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+            background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+            background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+            background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
         }
-         .body--ready1 {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 30%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 30%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 30%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 30%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 30%);
+        .body--ready1 {
+            background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+            background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+            background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+            background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+            background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
         }
         .body--ready2 {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 60%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 60%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 60%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 60%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 60%);
+            background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+            background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+            background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+            background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+            background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
         }
         .body--ready3 {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 90%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 90%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 90%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 90%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 90%);
+            background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+            background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+            background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+            background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+            background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
         }
 
         .body--ready4 {
-            background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-            background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-        }                
+            background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+            background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+            background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+            background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+            background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+        }
+        /*        .body--ready {
+                    background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+                    background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+                    background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+                    background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+                    background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 0%);
+                }
+                 .body--ready1 {
+                    background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+                    background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+                    background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+                    background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+                    background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 30%);
+                }
+                .body--ready2 {
+                    background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+                    background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+                    background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+                    background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+                    background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 60%);
+                }
+                .body--ready3 {
+                    background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+                    background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+                    background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+                    background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+                    background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 90%);
+                }
+        
+                .body--ready4 {
+                    background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+                    background: -moz-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+                    background: -o-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+                    background: -ms-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+                    background: linear-gradient(top, rgb(55, 148, 192) 0%, rgb(55, 148, 192) 120%);
+                }                */
 /*         .text {
     position: fixed;
     bottom: 100px;
@@ -102,7 +140,7 @@
             text-align: center;
         }
         .text {
-            position: fixed;
+            position: relative;
             bottom: 80px;
             text-align: center;
             width: 100%;
@@ -114,6 +152,9 @@
             text-align: right;
             width: 100%;
             font-weight: bold;
+        }
+        .waline {
+            background: white;
         }
     </style>
 
@@ -135,7 +176,13 @@
     <br/>
     <span id="span_dt_dt"></span>
 </p>
-
+<div class="waline" id="waline"></div>
+<script>
+    Waline.init({
+        el: '#waline',
+        serverURL: 'https://topic-from-walie.vercel.app/',
+    });
+</script>
 
 <script language="javascript">
     function show_date_time() {
